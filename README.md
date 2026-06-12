@@ -1,153 +1,78 @@
-# Le Thanh Phuong Portfolio
+# Le Thanh Phuong (Daniel) - Portfolio
 
-Personal portfolio website for **Le Thanh Phuong (Daniel)**, a full-stack web developer focused on ASP.NET MVC, SQL Server, WordPress, SEO-ready business websites, frontend systems, HTML5 playable ad prototypes, no-code builder MVPs, Discord bot/stat tracker work, AI chatbot workflows, hosting, DNS, Cloudflare, IIS, and VPS support.
+Full-stack web developer focused on practical business systems, WordPress websites, SEO-ready product pages, frontend interfaces, HTML5 playable ad prototypes, no-code builder MVPs, Discord bot/stat tracker projects, AI chatbot workflows, hosting, DNS, Cloudflare, IIS, SQL Server, and VPS operations.
 
-Built with **Next.js**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**.
+**Live portfolio:** https://gnouhptv.github.io/portfolio/  
+**GitHub:** https://github.com/GnouhPTV  
+**CV:** [LE-THANH-PHUONG-CV-UPDATED.pdf](public/LE-THANH-PHUONG-CV-UPDATED.pdf)
 
-## Highlights
+## Profile
 
-- Interactive hero with dark technical visual style and subtle network particle motion.
-- Compact right-side quick navigation for all portfolio sections.
-- Data-driven sections for About, Why Me, Skills, Experience, Projects, Websites, AI Tools, SEO, Education, Contact, and Footer.
-- Featured project views for Playable Ads Studio UI and UA Playable Games Lab.
-- Downloadable CV PDF and Duolingo English Test certificate.
-- Static export ready for GitHub Pages.
+I build practical web systems that connect frontend interfaces, backend logic, databases, deployment, hosting, website operations, SEO requirements, and business content. My work is shaped by real website maintenance, internal system development, WordPress execution, and hands-on frontend product/game prototype learning.
 
-## Tech Stack
+I am especially interested in roles where I can combine full-stack development, system support, frontend product thinking, and business-focused website delivery.
 
-- Next.js 15
-- React 18
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide React
+## Core Strengths
 
-## Local Development
+- Full-stack web development with ASP.NET MVC, C#, SQL Server, JavaScript, HTML, and CSS.
+- WordPress website building with Flatsome, Elementor, WooCommerce, PHP, SEO pages, landing pages, and product content.
+- Frontend development with React, Next.js, TypeScript, Tailwind CSS, Framer Motion, Vite, and Phaser 3.
+- HTML5 playable ad prototypes with scene logic, input handling, collision, timers, rewards, CTA flow, replay, and ZIP export.
+- No-code builder MVP workflows including dashboard, editor UI, asset management, preview, validation, and export.
+- Hosting and operations support across VPS, IIS Manager, DNS, SSL, Cloudflare, Hostinger, backups, and troubleshooting.
+- Automation and support workflows including Discord bots, stat trackers, REST API data fetching, and AI chatbot concepts.
 
-```bash
-npm install
-npm run dev
-```
+## Featured Work
 
-Open:
+### Playable Ads Studio UI
 
-```text
-http://localhost:3000
-```
+A local no-code MVP for creating UA playable ad prototypes. It includes a dashboard, template gallery, visual editor, asset manager, runtime preview, validation checklist, video-to-playable workflow, AI builder mock, and standalone ZIP export.
 
-## Build
+### UA Playable Games Lab
 
-```bash
-npm run typecheck
-npm run build
-```
+A collection of HTML5 playable ad prototypes built with Vite, TypeScript, Phaser 3, HTML, CSS, JavaScript, and JSZip. The project explores tap, drag, merge, collision, projectile, reward, timer, CTA, end-card, replay, and export mechanics.
 
-This project uses `output: "export"` in `next.config.ts`, so `npm run build` generates a static `out/` folder. The `out/` folder is intentionally ignored in Git.
+### ECO3D Business Websites and Internal Systems
 
-For GitHub Pages deployment, use `npm run build:pages` so local-only files are removed from `out/` after export.
+Hands-on full-stack and operations work using ASP.NET MVC, C#, SQL Server, JavaScript, HTML, CSS, IIS, VPS deployment, domain/DNS configuration, SSL, Cloudflare, backups, and database access.
 
-## GitHub Pages Build
+### WordPress, SEO, and Product Websites
 
-For the repository `GnouhPTV/portfolio`, GitHub Pages will usually be served from:
+WordPress and SEO work across product pages, landing pages, WooCommerce pages, Flatsome layouts, Elementor sections, safety equipment content, SEO keyword planning, and hosting support.
 
-```text
-https://gnouhptv.github.io/portfolio/
-```
+### Valorant Stats Discord Bot
 
-Build with the repository base path:
+A Discord bot for Valorant player stat lookup using Node.js, Discord.js, MongoDB, Mongoose, Axios, node-fetch, and REST API data retrieval. It supports competitive/unrated stats, recent match summaries, agent/weapon/map stats, and linked usernames.
 
-```powershell
-$env:NEXT_PUBLIC_BASE_PATH="/portfolio"
-npm.cmd run build:pages
-```
+## Technical Stack
 
-The static site will be generated in:
+**Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Framer Motion, Vite, Phaser 3  
+**Backend/System:** ASP.NET MVC, C#, SQL Server, PHP, MySQL, IIS, VPS, DNS, SSL, Cloudflare  
+**WordPress/SEO:** WordPress, Flatsome, Elementor, WooCommerce, SEO content planning, product pages, landing pages  
+**Tools/Automation:** Node.js, Discord.js, MongoDB, Mongoose, Axios, REST API, Git, GitHub, JSZip  
 
-```text
-out/
-```
+## Portfolio Sections
 
-## What To Commit
+- Home
+- About
+- Why Me
+- Skills
+- Experience
+- Projects
+- Websites
+- AI Tools
+- SEO
+- Education
+- Contact
 
-Commit source code, config, package files, and required public assets:
+## Education and English
 
-- `src/`
-- `public/LE-THANH-PHUONG-CV-UPDATED.pdf`
-- `public/Duolingo-English-Test.pdf`
-- `public/images/cv-profile-cover.jpg`
-- `public/images/developer-workstation.jpg`
-- `scripts/generate-cv-pdf.mjs`
-- `scripts/clean-pages-output.mjs`
-- `package.json`
-- `package-lock.json`
-- `next.config.ts`
-- `tailwind.config.ts`
-- `postcss.config.mjs`
-- `tsconfig.json`
-- `.gitignore`
-- `README.md`
+- Greenwich University - Information Technology, GPA 3.38 / 4.0
+- Duolingo English Test 95 / IELTS 5.5 equivalent
+- Became a Fresher - DevPlus Campus
 
-Do not commit generated or local-only files:
+## About This Repository
 
-- `.next/`
-- `node_modules/`
-- `out/`
-- `dist/`
-- `*.tsbuildinfo`
-- `.env*`
-- `public/LE-THANH-PHUONG-CV-UPDATED.html`
-- `public/images/cv-profile-header.jpg`
+This repository contains the source code for my personal portfolio website. The site is built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Lucide React, then statically exported for GitHub Pages.
 
-## Where To Edit Content
-
-- Profile, hero copy, contact info, education, certificates, strengths, and SEO topics: `src/data/profile.ts`
-- Skills: `src/data/skills.ts`
-- Experience timeline: `src/data/experience.ts`
-- Projects and categories: `src/data/projects.ts`
-- Website project grid: `src/data/websites.ts`
-- Hero and background interaction: `src/components/Hero.tsx`
-- Right-side navigation and section shell: `src/components/PortfolioShell.tsx`
-- CV PDF generator: `scripts/generate-cv-pdf.mjs`
-
-## CV
-
-The portfolio download button points to:
-
-```text
-public/LE-THANH-PHUONG-CV-UPDATED.pdf
-```
-
-To regenerate the PDF locally:
-
-```bash
-node scripts/generate-cv-pdf.mjs
-```
-
-## Upload To GitHub
-
-This folder is not initialized as a Git repository yet. Use these commands when ready:
-
-```bash
-git init
-git branch -M main
-git remote add origin https://github.com/GnouhPTV/portfolio.git
-git add .
-git commit -m "Initial portfolio"
-git push -u origin main
-```
-
-To deploy the generated `out/` folder to a `gh-pages` branch without committing `out/` to `main`, build first and then use:
-
-```powershell
-$env:NEXT_PUBLIC_BASE_PATH="/portfolio"
-npm.cmd run build:pages
-npx gh-pages -d out
-```
-
-Then set GitHub Pages source to the `gh-pages` branch in repository settings.
-
-## Notes
-
-- No backend or database is included.
-- The contact form is currently frontend UI only.
-- No GitHub workflow is included.
+The portfolio includes a downloadable CV, certificate reference, interactive hero visuals, compact section navigation, project detail pages, and data-driven content sections.

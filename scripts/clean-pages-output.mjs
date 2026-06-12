@@ -1,4 +1,4 @@
-import { rmSync } from "node:fs";
+import { rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const outputRoot = resolve(process.cwd(), "out");
@@ -14,4 +14,7 @@ for (const file of localOnlyOutputFiles) {
   });
 }
 
+writeFileSync(resolve(outputRoot, ".nojekyll"), "");
+
 console.log("Cleaned local-only files from out/.");
+console.log("Created out/.nojekyll for GitHub Pages.");
