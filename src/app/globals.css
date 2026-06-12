@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: #030712;
+  --foreground: #e5f8f3;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 112px;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(3, 7, 18, 0.95), rgba(3, 7, 18, 1)),
+    #030712;
+  color: var(--foreground);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(115deg, rgba(52, 211, 153, 0.08), transparent 36%, rgba(34, 211, 238, 0.08) 72%, transparent);
+  background-size: 44px 44px, 44px 44px, cover;
+  mask-image: linear-gradient(to bottom, black, black 70%, transparent);
+}
+
+body::after {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.04), transparent);
+  opacity: 0.7;
+}
+
+::selection {
+  background: rgba(52, 211, 153, 0.35);
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  scroll-margin-top: 112px;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8;
+  }
+
+  .section-kicker {
+    @apply mb-3 inline-flex rounded-lg border border-mint/25 bg-mint/10 px-3 py-1.5 text-sm font-semibold text-mint;
+  }
+
+  .section-title {
+    @apply text-balance text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .glass-card {
+    @apply rounded-lg border border-white/10 bg-white/[0.06] shadow-glow backdrop-blur-xl transition;
+  }
+
+  .form-field {
+    @apply min-h-11 w-full rounded-lg border border-white/10 bg-ink/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-mint/45 focus:ring-2 focus:ring-mint/15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,26 @@
+.next
+node_modules
+out
+dist
+*.tsbuildinfo
+.vercel
+coverage
+.turbo
+.cache
+.env
+.env*
+!.env.example
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.next-dev.*.log
+.DS_Store
+Thumbs.db
+
+# Local CV editing/reference artifacts
+public/LE-THANH-PHUONG-CV-UPDATED.html
+public/images/cv-profile-header.jpg
