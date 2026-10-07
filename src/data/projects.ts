@@ -1,8 +1,9 @@
+import { eco3dSites } from "./websites";
+
 export type ProjectCategory =
   | "WordPress"
   | "Full-stack"
   | "Internal system"
-  | "SEO"
   | "Automation"
   | "Product"
   | "Game"
@@ -34,7 +35,6 @@ export interface ProjectItem {
   categories: ProjectCategory[];
   url?: string;
   github?: string;
-  aiSpotlight?: boolean;
   featured?: boolean;
   detailHref?: string;
   demoStatus?: string;
@@ -46,17 +46,184 @@ export const projectCategories: ProjectCategory[] = [
   "WordPress",
   "Full-stack",
   "Internal system",
-  "SEO",
   "Automation",
   "Product",
   "Game",
   "Frontend"
 ];
 
+interface SiteDetail {
+  description: string;
+  features: string[];
+  stack?: string[];
+}
+
+// Site-specific details where the portfolio already documents the work;
+// other ECO3D sites use the shared description below.
+const eco3dSiteDetails: Record<string, SiteDetail> = {
+  "promask.vn": {
+    description:
+      "WordPress respiratory protection website where I built and updated product pages and the product information structure.",
+    stack: ["WordPress", "WooCommerce"],
+    features: [
+      "Built and updated WordPress product pages",
+      "Created content structure for product education",
+      "Managed page content and product information updates"
+    ]
+  },
+  "gangtaydien.com": {
+    description:
+      "Built and improved a WordPress ecommerce-oriented website for electrical safety gloves and protective equipment, with a sales-focused structure, product pages, and responsive layouts.",
+    stack: ["WordPress", "Flatsome", "WooCommerce"],
+    features: [
+      "Website structure planning",
+      "Product page creation",
+      "Homepage redesign",
+      "WordPress and Flatsome customization"
+    ]
+  },
+  "kingprosafety.com": {
+    description:
+      "WordPress safety equipment website where I built and improved product pages and resolved performance issues.",
+    stack: ["WordPress", "WooCommerce", "Cloudflare"],
+    features: [
+      "Built and improved WordPress product pages",
+      "Troubleshot cache, image loading, and CDN issues",
+      "Configured Cloudflare support for performance"
+    ]
+  },
+  "giayantoan.net": {
+    description:
+      "WordPress safety product website where I built and maintained product pages and improved the site structure.",
+    features: [
+      "Built and maintained WordPress product pages",
+      "Improved content structure and internal page flow",
+      "Supported ongoing website updates and UX cleanup"
+    ]
+  },
+  "gmggloves.com": {
+    description:
+      "WordPress gloves product website where I built product and landing pages and maintain the site.",
+    features: [
+      "Built WordPress product and landing pages",
+      "Reviewed landing page structure for sales clarity",
+      "Maintained page content and website updates"
+    ]
+  }
+};
+
+const eco3dWebsiteProjects: ProjectItem[] = eco3dSites.map((site) => {
+  const detail = eco3dSiteDetails[site];
+  return {
+    title: site,
+    type: "ECO3D Company Website / WordPress",
+    url: `https://${site}/`,
+    stack: detail?.stack ?? ["WordPress", "PHP", "JavaScript", "MySQL"],
+    categories: ["WordPress"],
+    description:
+      detail?.description ??
+      `One of the ${eco3dSites.length} ECO3D company websites where I develop custom WordPress features and handle hosting, maintenance, and production support.`,
+    features: detail?.features ?? [
+      "Custom WordPress feature development",
+      "Hosting, DNS, Cloudflare, and SSL management",
+      "Security, maintenance, and production troubleshooting"
+    ]
+  };
+});
+
 export const projects: ProjectItem[] = [
   {
+    title: "Salesoft Online (ECO3D Portal)",
+    type: "Business Portal / Full-Stack System",
+    url: "https://banggia.eco3d.vn/",
+    stack: ["Java", "Spring Boot", "Spring Security", "React", "Vite", "SQL Server", "reCAPTCHA v2"],
+    categories: ["Full-stack", "Internal system"],
+    featured: true,
+    visualTags: ["Roles", "Approval", "Dashboard", "Security"],
+    description:
+      "Built and maintained ECO3D's business portal for internal staff and external resellers with Java Spring Boot, React (Vite), and SQL Server, including role-based access, a two-stage reseller approval workflow, and sales reporting.",
+    features: [
+      "Role-based access and two-stage reseller approval workflow",
+      "Fixed a Spring Security authentication issue (@AuthenticationPrincipal) affecting non-employee accounts",
+      "Prevented employee/reseller ID collisions in a table shared with an older desktop sales system",
+      "Sales dashboard and reseller login analytics from existing order data",
+      "Google reCAPTCHA v2 and an existing stored procedure for stock data",
+      "Technical documentation and process diagrams for management"
+    ]
+  },
+  {
+    title: "ECO3D Admin & SQL Server System",
+    type: "ASP.NET MVC + SQL Server Internal System",
+    stack: ["ASP.NET MVC", "C#", "SQL Server", "JavaScript", "HTML", "CSS", "IIS"],
+    categories: ["Full-stack", "Internal system"],
+    featured: true,
+    visualTags: ["MVC", "SQL Server", "IIS", "Access"],
+    description:
+      "Designed and built a full-stack internal admin system for ECO3D using ASP.NET MVC, C#, and SQL Server. The system turns business data into a structured management interface with authentication, product data handling, MVC views, server deployment, and database-backed workflows.",
+    features: [
+      "ASP.NET MVC structure with Controllers, Models, Views, and wwwroot assets",
+      "C# backend logic for admin and business operations",
+      "SQL Server database integration for product and system data",
+      "Authentication and role-based access control concepts",
+      "Product list, product detail, search, and data management workflows",
+      "Responsive admin interface using JavaScript, HTML, and CSS",
+      "IIS deployment and hosting environment configuration",
+      "Database account, backup, restore, and troubleshooting support"
+    ]
+  },
+  {
+    title: "ECO3D Business Website",
+    type: "ASP.NET MVC Business / Product Website",
+    url: "https://eco3d.vn/",
+    github: "https://github.com/GnouhPTV/Eco3d",
+    stack: ["ASP.NET MVC", "C#", "SQL Server", "JavaScript", "HTML", "CSS"],
+    categories: ["Full-stack"],
+    description:
+      "Built and maintained the ECO3D business website using ASP.NET MVC, C#, JavaScript, HTML, CSS, and SQL Server. The work combined full-stack development, product data display, business content, server deployment, and database-backed website operations.",
+    features: [
+      "ASP.NET MVC website development with C# backend logic",
+      "SQL Server product and business data integration",
+      "Product page and product category display",
+      "Product page and business content creation",
+      "Homepage redesign and UX planning",
+      "IIS, VPS, domain, SSL, and hosting configuration",
+      "Cloudflare/CDN and performance optimization"
+    ]
+  },
+  ...eco3dWebsiteProjects,
+  {
+    title: "hikariulm.com",
+    type: "Freelance / Client Website / WordPress",
+    url: "https://hikariulm.com/",
+    stack: ["WordPress", "Responsive UI", "Hosting"],
+    categories: ["WordPress"],
+    description:
+      "WordPress brand website for a Japanese restaurant, built for brand presentation with responsive pages for desktop and mobile.",
+    features: [
+      "Built the WordPress website for brand presentation",
+      "Implemented homepage layout and visual content sections",
+      "Structured pages for restaurant information",
+      "Styled responsive pages for desktop and mobile"
+    ]
+  },
+  {
+    title: "clearsimulations.com",
+    type: "Freelance / Client Website / WordPress",
+    url: "https://clearsimulations.com/",
+    stack: ["WordPress", "Hosting", "DNS"],
+    categories: ["WordPress"],
+    description:
+      "WordPress business website where I provided maintenance, hosting and DNS support, and technical troubleshooting.",
+    features: [
+      "Supported WordPress website maintenance",
+      "Handled hosting checks and DNS support",
+      "Troubleshot technical website issues",
+      "Improved stability for business website operations"
+    ]
+  },
+  {
     title: "Playable Ads Studio UI",
-    type: "No-code Playable Ads Builder / Frontend Product MVP",
+    type: "Self-built project / No-code Playable Ads Builder",
     github: "https://github.com/GnouhPTV/Playable-Ads-Studio-UI",
     stack: [
       "Next.js 15",
@@ -71,7 +238,6 @@ export const projects: ProjectItem[] = [
       "Lucide React"
     ],
     categories: ["Product", "Frontend", "Game"],
-    featured: true,
     detailHref: "/projects/playable-ads-studio-ui",
     demoStatus: "Live Demo Coming Soon",
     visualTags: ["No-code", "Preview", "Validate", "Export"],
@@ -162,7 +328,7 @@ export const projects: ProjectItem[] = [
   },
   {
     title: "UA Playable Games Lab",
-    type: "HTML5 Game / Playable Ads / Frontend",
+    type: "Self-learning project / HTML5 Playable Ads",
     github: "https://github.com/GnouhPTV/UA-Playable-games-lab",
     stack: [
       "Vite",
@@ -176,7 +342,6 @@ export const projects: ProjectItem[] = [
       "GitHub"
     ],
     categories: ["Game", "Frontend"],
-    featured: true,
     detailHref: "/projects/ua-playable-games-lab",
     demoStatus: "Live Demo Coming Soon",
     visualTags: ["Tap", "Drag", "Merge", "Export"],
@@ -272,68 +437,13 @@ export const projects: ProjectItem[] = [
     }
   },
   {
-    title: "ECO3D Admin & SQL Server System",
-    type: "ASP.NET MVC + SQL Server Internal System",
-    stack: ["ASP.NET MVC", "C#", "SQL Server", "JavaScript", "HTML", "CSS", "IIS"],
-    categories: ["Full-stack", "Internal system"],
-    aiSpotlight: true,
-    description:
-      "Designed and built a full-stack internal admin system for ECO3D using ASP.NET MVC, C#, and SQL Server. The system turns business data into a structured management interface with authentication, product data handling, MVC views, server deployment, and database-backed workflows.",
-    features: [
-      "ASP.NET MVC structure with Controllers, Models, Views, and wwwroot assets",
-      "C# backend logic for admin and business operations",
-      "SQL Server database integration for product and system data",
-      "Authentication and role-based access control concepts",
-      "Product list, product detail, search, and data management workflows",
-      "Responsive admin interface using JavaScript, HTML, and CSS",
-      "IIS deployment and hosting environment configuration",
-      "Database account, backup, restore, and troubleshooting support"
-    ]
-  },
-  {
-    title: "ECO3D Business Website",
-    type: "ASP.NET MVC Business / Product Website",
-    url: "https://eco3d.vn/",
-    github: "https://github.com/GnouhPTV/Eco3d",
-    stack: ["ASP.NET MVC", "C#", "SQL Server", "JavaScript", "HTML", "CSS", "SEO"],
-    categories: ["Full-stack", "SEO"],
-    description:
-      "Built and maintained the ECO3D business website using ASP.NET MVC, C#, JavaScript, HTML, CSS, and SQL Server. The work combined full-stack development, product data display, SEO page planning, business content, server deployment, and database-backed website operations.",
-    features: [
-      "ASP.NET MVC website development with C# backend logic",
-      "SQL Server product and business data integration",
-      "Product page and product category display",
-      "SEO page and product content creation",
-      "Homepage redesign and UX planning",
-      "IIS, VPS, domain, SSL, and hosting configuration",
-      "Cloudflare/CDN and performance optimization"
-    ]
-  },
-  {
-    title: "Gang Tay Dien Website",
-    type: "Niche ecommerce / Product Website",
-    url: "https://gangtaydien.com",
-    stack: ["WordPress", "Flatsome", "WooCommerce", "SEO"],
-    categories: ["WordPress", "SEO"],
-    description:
-      "Built and improved a WordPress ecommerce-oriented website for electrical safety gloves and protective equipment, with a sales-focused structure, SEO-ready product pages, and responsive layouts.",
-    features: [
-      "Website structure planning",
-      "Product page creation",
-      "SEO content writing",
-      "Homepage redesign",
-      "WordPress and Flatsome customization",
-      "Sales-oriented layout"
-    ]
-  },
-  {
     title: "Grippaz Landing Page",
     type: "Product Landing Page",
     url: "https://grippaz.eco3d.vn/",
-    stack: ["WordPress", "Hostinger", "Landing Page Design", "SEO"],
-    categories: ["WordPress", "SEO"],
+    stack: ["WordPress", "Hostinger", "Landing Page Design"],
+    categories: ["WordPress"],
     description:
-      "Created a WordPress landing page for selling Grippaz multi-purpose gloves. The page was designed around one main product, clear benefits, SEO-friendly content, and conversion-oriented CTA sections.",
+      "Created a WordPress landing page for selling Grippaz multi-purpose gloves. The page was designed around one main product, clear benefits, product content, and conversion-oriented CTA sections.",
     features: [
       "Product introduction",
       "Sales copy",
@@ -347,7 +457,6 @@ export const projects: ProjectItem[] = [
     type: "Full-stack AI / Customer Support Tool",
     stack: ["WordPress", "PHP", "JavaScript", "OpenAI API", "AI Engine", "Email workflow"],
     categories: ["WordPress", "Full-stack", "Automation"],
-    aiSpotlight: true,
     description:
       "Designed and built full-stack chatbot workflows for product consultation and customer support on WordPress. The chatbot helps customers ask product questions, receive buying guidance, view payment instructions, and move from consultation to order support.",
     features: [
@@ -379,7 +488,6 @@ export const projects: ProjectItem[] = [
     type: "Room Rental Management System",
     stack: ["WordPress", "Flatsome", "PHP", "MySQL concept"],
     categories: ["WordPress", "Internal system", "Full-stack"],
-    aiSpotlight: true,
     description:
       "Designed a full-stack WordPress concept for room rental management, turning tenant, room, utility, and payment status data into an easy-to-read operational dashboard.",
     features: [
@@ -396,7 +504,6 @@ export const projects: ProjectItem[] = [
     type: "Inventory / Sales / Quotation System",
     stack: ["WordPress or React", "SQL Server", "PHP or Spring Boot"],
     categories: ["Full-stack", "Internal system"],
-    aiSpotlight: true,
     description:
       "Planned a full-stack internal business system for employee management, login, inventory, product groups, import/export stock, quotations, invoices, and SQL Server integration.",
     features: [
@@ -414,7 +521,6 @@ export const projects: ProjectItem[] = [
     type: "Personal Automation Logic Project",
     stack: ["Python", "PyAutoGUI", "Image detection", "OCR concepts"],
     categories: ["Automation"],
-    aiSpotlight: true,
     description:
       "Worked on automation logic for personal task-flow research, image detection, route planning, and configurable behavior. Presented as a personal automation logic project, not a commercial cheating product.",
     features: [
@@ -429,7 +535,7 @@ export const projects: ProjectItem[] = [
   },
   {
     title: "Valorant Stats Discord Bot",
-    type: "Discord Bot / Valorant Player Stats Tracker",
+    type: "Personal project / Discord Bot",
     github: "https://github.com/GnouhPTV/valorant-stats",
     stack: [
       "Node.js",

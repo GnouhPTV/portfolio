@@ -20,7 +20,6 @@ import {
   Github,
   LayoutTemplate,
   Package,
-  Search,
   ServerCog,
   Zap
 } from "lucide-react";
@@ -37,7 +36,6 @@ function projectIcon(project: ProjectItem) {
   if (project.categories.includes("Game")) return Gamepad2;
   if (project.categories.includes("Automation")) return Bot;
   if (project.categories.includes("Internal system")) return Database;
-  if (project.categories.includes("SEO")) return Search;
   if (project.categories.includes("WordPress")) return LayoutTemplate;
   if (project.categories.includes("Full-stack")) return ServerCog;
   return FolderGit2;
@@ -206,11 +204,7 @@ function ProjectCard({ project, index }: { project: ProjectItem; index: number }
   );
 }
 
-interface ProjectsProps {
-  view?: "all" | "featured" | "ai";
-}
-
-export default function Projects({ view = "all" }: ProjectsProps) {
+export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
 
   const visibleProjects = useMemo(() => {
@@ -218,105 +212,44 @@ export default function Projects({ view = "all" }: ProjectsProps) {
     return projects.filter((project) => project.categories.includes(activeFilter));
   }, [activeFilter]);
 
-  const aiProjects = projects.filter((project) => project.aiSpotlight);
-
   return (
-    <>
-      {view !== "ai" ? (
-        <MotionWrapper id="projects" className="section-shell">
-          <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl">
-              <p className="section-kicker">Featured Projects</p>
-              <h2 className="section-title">
-                Featured product, game, full-stack, WordPress, SEO, and automation work.
-              </h2>
-            </div>
-            <div className="flex max-w-full gap-2 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:max-w-xl lg:flex-wrap lg:justify-end lg:overflow-visible lg:pb-0">
-              {filters.map((filter) => (
-                <button
-                  key={filter}
-                  type="button"
-                  onClick={() => setActiveFilter(filter)}
-                  aria-pressed={activeFilter === filter}
-                  className={`shrink-0 rounded-lg border px-3 py-2 text-sm font-semibold transition ${
-                    activeFilter === filter
-                      ? "border-mint/40 bg-mint text-ink"
-                      : "border-white/10 bg-white/5 text-slate-200 hover:border-cyan/35 hover:text-cyan"
-                  }`}
-                >
-                  {filter}
-                </button>
-              ))}
-            </div>
-          </div>
+    <MotionWrapper id="projects" className="section-shell">
+      <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-3xl">
+          <p className="section-kicker">Projects</p>
+          <h2 className="section-title">
+            Business systems, company websites, and the projects I built to learn new tools.
+          </h2>
+        </div>
+        <div className="flex max-w-full gap-2 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:max-w-xl lg:flex-wrap lg:justify-end lg:overflow-visible lg:pb-0">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+              aria-pressed={activeFilter === filter}
+              className={`shrink-0 rounded-lg border px-3 py-2 text-sm font-semibold transition ${
+                activeFilter === filter
+                  ? "border-mint/40 bg-mint text-ink"
+                  : "border-white/10 bg-white/5 text-slate-200 hover:border-cyan/35 hover:text-cyan"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      </div>
 
-          <motion.div
-            className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3"
-            layout
-          >
-            <AnimatePresence mode="popLayout">
-              {visibleProjects.map((project, index) => (
-                <ProjectCard key={project.title} project={project} index={index} />
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </MotionWrapper>
-      ) : null}
-
-      {view !== "featured" ? (
-        <MotionWrapper
-          id="ai-tools"
-          className={view === "ai" ? "section-shell" : "section-shell pt-0"}
-        >
-          <div className="mb-10 max-w-3xl">
-            <p className="section-kicker">AI / Automation / Internal Tools Projects</p>
-            <h2 className="section-title">
-              System thinking for internal workflows, data access, and automation logic.
-            </h2>
-          </div>
-
-          <div className="grid gap-5 lg:grid-cols-2">
-            {aiProjects.map((project, index) => {
-              const Icon = project.categories.includes("Automation") ? Bot : Boxes;
-              return (
-                <motion.article
-                  key={project.title}
-                  className="glass-card p-6"
-                  whileHover={{ y: -5 }}
-                  transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                >
-                  <div className="mb-5 flex items-start gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg border border-mint/30 bg-mint/10 text-mint">
-                      <Icon size={22} />
-                    </span>
-                    <div>
-                      <p className="text-sm text-cyan">
-                        {(index + 1).toString().padStart(2, "0")} / {project.type}
-                      </p>
-                      <h3 className="mt-2 text-xl font-semibold text-white">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="text-sm leading-7 text-slate-300">
-                    {project.description}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.features.slice(0, 5).map((feature) => (
-                      <span
-                        key={feature}
-                        className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-200"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </motion.article>
-              );
-            })}
-          </div>
-        </MotionWrapper>
-      ) : null}
-    </>
+      <motion.div
+        className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3"
+        layout
+      >
+        <AnimatePresence mode="popLayout">
+          {visibleProjects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
+    </MotionWrapper>
   );
 }

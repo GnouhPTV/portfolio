@@ -8,18 +8,15 @@ import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Navbar, { type NavigationItem } from "@/components/Navbar";
 import Projects from "@/components/Projects";
-import SEOSection from "@/components/SEOSection";
 import Skills from "@/components/Skills";
 import WebsiteProjects from "@/components/WebsiteProjects";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Bot,
   BriefcaseBusiness,
   GraduationCap,
   Globe2,
   LayoutGrid,
   Mail,
-  Search,
   Sparkles,
   Target,
   User,
@@ -45,7 +42,7 @@ const sections: PortfolioSection[] = [
   {
     id: "projects",
     label: "Projects",
-    component: () => <Projects view="featured" />,
+    component: Projects,
     icon: LayoutGrid
   },
   {
@@ -54,13 +51,6 @@ const sections: PortfolioSection[] = [
     component: WebsiteProjects,
     icon: Globe2
   },
-  {
-    id: "ai-tools",
-    label: "AI Tools",
-    component: () => <Projects view="ai" />,
-    icon: Bot
-  },
-  { id: "seo", label: "SEO", component: SEOSection, icon: Search },
   {
     id: "education",
     label: "Education",

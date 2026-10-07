@@ -7,123 +7,84 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
-    summary: "Responsive product interfaces, dashboards, animated UI, and interaction-heavy frontend work.",
+    summary: "User interfaces, dashboards, and interactive web pages.",
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
       "React",
       "Next.js",
-      "Vite",
-      "Zustand",
-      "LocalStorage",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Responsive UI",
-      "No-code editor UI",
-      "UX/UI Design"
-    ]
-  },
-  {
-    title: "HTML5 Game / Playable Ads",
-    summary: "Mobile-style playable ad prototypes and lightweight game interaction mechanics.",
-    skills: [
-      "Phaser 3",
-      "Vite",
       "TypeScript",
-      "HTML5 playable ads",
-      "Scene architecture",
-      "Tap interaction",
-      "Drag controls",
-      "Collision detection",
-      "Projectiles",
-      "Reward feedback",
-      "End cards",
-      "HTML5 ZIP export",
-      "Video-to-playable MVP"
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "AJAX",
+      "Vite",
+      "Phaser 3"
     ]
   },
   {
-    title: "Backend",
-    summary: "Business logic, WordPress extensions, and practical API integration.",
+    title: "Backend & Database",
+    summary: "Business logic, APIs, and the databases behind them.",
     skills: [
-      "PHP",
-      "WordPress Plugin Development",
-      ".NET MVC",
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "ASP.NET MVC",
       "C#",
-      "Spring Boot basics",
-      "REST API basics"
-    ]
-  },
-  {
-    title: "Database",
-    summary: "SQL Server and MySQL operations for product, account, and internal data.",
-    skills: [
+      "PHP",
+      "Node.js",
       "SQL Server",
       "MySQL",
-      "Database design",
-      "SQL queries",
-      "Backup and restore",
-      "Data connection troubleshooting"
+      "MongoDB",
+      "REST API"
+    ]
+  },
+  {
+    title: "Business Systems",
+    summary: "Who can log in, who can do what, and what managers see.",
+    skills: [
+      "Authentication",
+      "Role-based access",
+      "Approval workflows",
+      "Dashboards / reporting",
+      "User management"
+    ]
+  },
+  {
+    title: "Servers & Deployment",
+    summary: "Putting applications online and keeping them running.",
+    skills: [
+      "IIS",
+      "VPS",
+      "Hostinger",
+      "Cloudflare",
+      "DNS",
+      "SSL",
+      "Database backup / restore",
+      "Git",
+      "GitHub"
     ]
   },
   {
     title: "WordPress / CMS",
-    summary: "Production website maintenance, customization, WooCommerce, and page building.",
+    summary: "Building and customizing company websites beyond standard themes.",
     skills: [
       "WordPress",
-      "Flatsome Theme",
-      "UX Builder",
-      "Elementor",
       "WooCommerce",
-      "Custom Shortcodes",
-      "Plugin customization",
-      "Theme customization",
-      "LiteSpeed Cache"
+      "Flatsome",
+      "Elementor",
+      "Custom plugins",
+      "Custom shortcodes"
     ]
   },
   {
-    title: "Server / DevOps / IT",
-    summary: "Hosting, deployment, DNS, performance, and operational troubleshooting.",
+    title: "Additional Strengths",
+    summary: "Working habits from supporting real systems and teams.",
     skills: [
-      "IIS Manager",
-      "VPS management",
-      "Hostinger hosting",
-      "DNS configuration",
-      "Cloudflare CDN",
-      "SSL setup",
-      "Windows Server basics",
-      "Website deployment",
-      "Website maintenance",
-      "Performance optimization",
-      "Security monitoring"
-    ]
-  },
-  {
-    title: "Marketing / SEO",
-    summary: "Content and technical SEO work connected to business website outcomes.",
-    skills: [
-      "SEO content writing",
-      "Keyword research",
-      "Product page optimization",
-      "Backlink planning",
-      "Website analytics",
-      "Content management",
-      "Landing page optimization"
-    ]
-  },
-  {
-    title: "Tools",
-    summary: "Daily tools for coding, debugging, database work, and communication.",
-    skills: [
-      "Git",
-      "GitHub",
-      "Visual Studio Code",
-      "SSMS",
-      "Figma basics",
-      "Postman basics",
-      "Microsoft Office"
+      "Troubleshooting live systems",
+      "Learning new tools independently",
+      "Technical documentation",
+      "Explaining technical work to non-technical users",
+      "Coordinating technical tasks"
     ]
   }
 ];

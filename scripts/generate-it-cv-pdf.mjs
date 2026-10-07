@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
-const outputPath = resolve(root, "public", "LE-THANH-PHUONG-CV-UPDATED.pdf");
+const outputPath = resolve(root, "public", "LE-THANH-PHUONG-CV-IT.pdf");
 const profileImagePath = resolve(root, "public", "images", "cv-profile-cover.jpg");
 
 const pageWidth = 595;
@@ -32,28 +32,31 @@ const contact = [
 ];
 
 const skillGroups = [
-  ["Frontend", "React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Zustand, Vite, Phaser 3"],
-  ["Backend & Database", "Java, Spring Boot, Spring Security, ASP.NET MVC, C#, PHP, Node.js, SQL Server, MySQL, MongoDB, REST API, Stored Procedures"],
-  ["Web Development", "WordPress, WooCommerce, Custom Plugins, Custom Shortcodes, AJAX, Authentication & RBAC, Responsive UI"],
-  ["System & Deployment", "IIS, VPS, Hostinger, Cloudflare, DNS, SSL, Git, GitHub"],
-  ["Tools", "Mongoose, Discord.js, Axios, JSZip"]
+  ["Frontend", "React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, AJAX, Vite, Phaser 3"],
+  ["Backend & Database", "Java, Spring Boot, Spring Security, ASP.NET MVC, C#, PHP, Node.js, SQL Server, MySQL, MongoDB, REST API"],
+  ["Business Systems", "User login & role-based access (RBAC), approval workflows, dashboards & reporting, WordPress, WooCommerce"],
+  ["Servers & Deployment", "IIS, VPS, Hostinger, Cloudflare, DNS, SSL, database backup & restore, Git, GitHub"],
+  ["Additional Strengths", "Troubleshooting live systems, learning new tools independently, documenting for non-technical readers, coordinating tasks and interns"]
 ];
 
 const headerSummary =
-  "Full-Stack Web Developer building business web applications and production websites. Currently developing Salesoft Online, a Java Spring Boot + React portal on SQL Server with role-based access control, approval workflows, and sales reporting. Experienced with ASP.NET MVC / C# internal systems and custom WordPress / PHP development across 13 production sites. Works across frontend, backend, database, REST API integration, deployment, and debugging production issues.";
+  "IT graduate with hands-on experience building and running business systems and production websites: a sales portal (Java Spring Boot, React, SQL Server), an internal admin system (ASP.NET MVC, C#), and 13 company websites. Work has covered frontend, backend, databases, API integration, server deployment, and fixing live production issues. Comfortable learning new tools and adapting to new business domains; open to IT, systems, implementation, and technical support roles as well as development.";
 
 const experiences = [
   {
     company: "Salesoft Online (ECO3D Portal)",
     time: "04/2026 - Present",
     role: "Full-Stack Web Developer | Java Spring Boot, React (Vite), SQL Server",
+    linkLabel: "Website",
+    link: "banggia.eco3d.vn",
     description: [
-      "Developed Salesoft Online, a Java Spring Boot + React (Vite) business portal backed by SQL Server, serving internal staff and external CTV/reseller accounts.",
-      "Designed and implemented a CTV account lifecycle with role-based access control (Marketing vs Approver roles), replacing a single-tier admin flow with a multi-stage contact-and-approval workflow.",
-      "Diagnosed and fixed a Spring Security @AuthenticationPrincipal binding bug that caused silent null principals for non-employee accounts across multiple controllers.",
-      "Resolved an ID collision risk between employee and reseller identities in a cart table shared with a legacy desktop POS system by designing a safe ID-namespacing scheme.",
-      "Integrated Google reCAPTCHA v2 to block spam on a public inventory-check endpoint, and replaced an inaccurate stock-quantity workaround with a legacy stored procedure.",
-      "Built CTV login analytics and a sales dashboard aggregating order count and revenue per reseller from existing order data, without adding new database tables."
+      "Built and maintained Salesoft Online, ECO3D's business portal for internal staff and external resellers (CTV), with Java Spring Boot, React, and SQL Server.",
+      "Implemented role-based access and a two-stage approval workflow for reseller accounts, so Marketing staff screen applicants and Approvers make the final decision.",
+      "Diagnosed and fixed a Spring Security authentication issue (@AuthenticationPrincipal) where logged-in non-employee accounts were silently not recognised across multiple parts of the system.",
+      "Prevented employee and reseller accounts from being mixed up in a database table shared with an older desktop sales (POS) system, by designing a safe ID-namespacing scheme.",
+      "Added Google reCAPTCHA v2 to block spam on a public stock-check page, and switched stock figures to an existing stored procedure, replacing an inaccurate workaround.",
+      "Built a sales dashboard and reseller login analytics showing orders and revenue per reseller, using existing order data without adding new database tables.",
+      "Wrote technical documentation, process diagrams, and feature summaries so management and other teams could review new features."
     ]
   },
   {
@@ -63,26 +66,35 @@ const experiences = [
     linkLabel: "Websites",
     link: "kinggoggles.com, vuason.com, scba.vn, sudecons.vn, thamcachdien.vn, popa.vn, hachico.com.vn, gmggloves.com, honeywell-safety.vn, giayantoan.net, gangtaydien.com, kingprosafety.com, promask.vn",
     description: [
-      "Developed custom features and maintained 13 production company and brand websites using WordPress, PHP, JavaScript, HTML, CSS, and MySQL.",
-      "Built custom WordPress plugins and shortcodes for product catalogs, search/filter systems, product detail views, modals, and dynamic UI components.",
-      "Implemented AJAX-based product search, filtering, and dynamic content loading without full page reloads.",
-      "Integrated REST APIs and wrote database queries to connect product and business data; implemented user authentication and access control in custom WordPress features.",
-      "Extended WooCommerce, Flatsome (UX Builder), and Elementor with custom PHP and JavaScript where standard theme features were not enough.",
-      "Debugged and resolved production issues and optimized website performance, with supporting technical SEO improvements.",
-      "Deployed and configured sites on Hostinger with Cloudflare, DNS, and SSL.",
-      "Translated business requirements into technical solutions and led task assignment for interns on the web team."
+      "Developed custom features and maintained 13 live websites for ECO3D's safety-equipment and industrial-product brands, using WordPress, PHP, JavaScript, and MySQL.",
+      "Wrote custom plugins and shortcodes to add features the standard platform lacked: product catalogs, instant search and filtering (AJAX), product detail pages, and dynamic page components.",
+      "Connected the websites to product and business data through REST APIs and database queries, and added user login and access control to custom features.",
+      "Extended WooCommerce (online store), Flatsome, and Elementor with custom PHP and JavaScript where built-in features were not enough.",
+      "Kept all sites running: managed hosting, domains (DNS), Cloudflare, SSL certificates, and security, fixed production issues and improved website performance.",
+      "Worked between marketing and IT: turned marketing requests into technical tasks and assigned website and content tasks to interns."
     ]
   },
   {
     company: "ECO3D Internal Admin System (ASP.NET MVC)",
     time: "06/2024 - 03/2025",
     role: "Full-Stack Web Developer | ASP.NET MVC, C#, SQL Server, IIS",
-    link: "https://github.com/GnouhPTV/Eco3d",
+    linkLabel: "Website",
+    link: "eco3d.vn",
     description: [
-      "Developed an internal admin system and business websites with ASP.NET MVC, C#, JavaScript, HTML, CSS, and SQL Server, including authentication, access control, product data management, and responsive admin UI.",
-      "Deployed applications to VPS servers and configured IIS Manager application pools, bindings, and SSL.",
-      "Maintained SQL Server databases, including user accounts, backups, restores, and connection troubleshooting.",
-      "Configured Cloudflare CDN and DNS, monitored VPS CPU, RAM, disk usage, and availability, and debugged production issues."
+      "Developed an internal admin system and business websites with ASP.NET MVC, C#, and SQL Server, including user login, access control, product data management, and an admin interface.",
+      "Deployed the applications to VPS servers and configured the IIS web server (application pools, bindings, SSL) so they could run in production.",
+      "Managed SQL Server databases: user accounts, backups, restores, and connection problems.",
+      "Set up Cloudflare and DNS, monitored server health (CPU, RAM, disk, uptime), and fixed production issues to keep the websites available."
+    ]
+  },
+  {
+    company: "Freelance & Client WordPress Websites",
+    time: "2024 - Present",
+    role: "WordPress Developer / Website Support",
+    linkLabel: "Websites",
+    link: "hikariulm.com, clearsimulations.com",
+    description: [
+      "Built a WordPress brand website with responsive layouts, and provided hosting, DNS, and troubleshooting support to keep client sites running."
     ]
   },
   {
@@ -91,8 +103,7 @@ const experiences = [
     role: "Frontend Developer | React, i18next, JavaScript",
     link: "https://github.com/GnouhPTV/autorokwebsite",
     description: [
-      "Developed website interfaces with React, JavaScript, HTML, and CSS, focusing on clean UI and responsive layout.",
-      "Built multilingual user interfaces with React and i18next."
+      "Developed responsive website interfaces with React, JavaScript, HTML, and CSS, including multilingual support with i18next."
     ]
   }
 ];
@@ -101,49 +112,45 @@ const projects = [
   {
     company: "Playable Ads Studio UI",
     time: "2026",
-    role: "No-code Playable Ads Builder | Next.js, React, TypeScript, Zustand, Phaser 3",
+    role: "Self-built product | Next.js, React, TypeScript, Zustand, Phaser 3",
     link: "https://github.com/GnouhPTV/Playable-Ads-Studio-UI",
     description: [
-      "Built a no-code editor for UA playable ad prototypes with Next.js, React, TypeScript, Zustand, Tailwind CSS, Phaser 3, and JSZip.",
-      "Developed editor UI components: dashboard, template gallery, visual scene editor, properties panel, layer management, asset manager, and phone preview.",
-      "Managed editor state with Zustand and implemented a runtime preview for actions, CTA, replay flow, score, timer, scene transitions, and template logic.",
-      "Added project validation and a ZIP export pipeline generating a standalone HTML/CSS/JS runtime, assets, project.json, manifest, and README."
+      "Built a no-code editor for creating interactive mobile ad prototypes without programming, using Next.js, React, TypeScript, Zustand, Tailwind CSS, and Phaser 3.",
+      "Developed the editor interface (templates, visual scene editor, layers, asset manager, phone preview), a live preview of ad behaviour, project validation, and ZIP export to a standalone HTML5 package."
     ]
   },
   {
     company: "UA Playable Games Lab",
     time: "2026",
-    role: "HTML5 Playable Ad Prototypes | Vite, TypeScript, Phaser 3",
+    role: "Self-learning project | Vite, TypeScript, Phaser 3",
     link: "https://github.com/GnouhPTV/UA-Playable-games-lab",
     description: [
-      "Built four HTML5 playable ad prototypes with Vite, TypeScript, Phaser 3, HTML, CSS, and JavaScript.",
-      "Implemented game interaction logic: tap and drag controls, drag-and-drop merge, collision detection, projectile targeting, enemy HP, rewards, timers, end cards, CTA, and replay flow.",
-      "Created a standalone HTML5 ZIP export with JSZip and followed a Git workflow with feature branches, semantic commits, version tags, a CHANGELOG, and a test plan."
+      "Built four HTML5 mini-game ad prototypes covering tap and drag controls, merging, collision detection, targeting, rewards, timers, end screens, and replay flow.",
+      "Packaged a game as a standalone ZIP with JSZip, and used a structured Git workflow with feature branches, version tags, a CHANGELOG, and a test plan."
     ]
   },
   {
     company: "Valorant Stats Discord Bot",
     time: "2022 - 2023",
-    role: "Node.js, Discord.js, MongoDB, Mongoose, Axios",
+    role: "Personal project | Node.js, Discord.js, MongoDB, Mongoose, Axios",
     link: "https://github.com/GnouhPTV/valorant-stats",
     description: [
-      "Built a Discord bot that fetches Valorant player statistics from a REST API using Node.js, Discord.js, Axios, and node-fetch.",
-      "Implemented commands for competitive, unrated, recent match, agent, weapon, and map stats, plus Discord-to-Valorant account linking stored in MongoDB."
+      "Built a Discord bot that pulls Valorant player statistics from a REST API, with commands for match, agent, weapon, and map stats, and account linking stored in MongoDB."
     ]
   },
   {
     company: "Enterprise Management Project",
     time: "03/2023 - 05/2023",
-    role: "Full-Stack Developer | 6-person team",
+    role: "Team project | Full-Stack Developer, 6-person team",
     link: "https://github.com/GnouhPTV/Comp1640",
     description: [
-      "Designed the UI and connected frontend with backend for employee management, announcements, and social media-style internal communication features."
+      "Designed the UI and connected frontend with backend for employee management, announcements, and internal social-feed features."
     ]
   },
   {
     company: "Unity 2D Game Project",
     time: "07/2022 - 10/2022",
-    role: "Game Logic Developer | Unity 2D, C#",
+    role: "Training project | Unity 2D, C#",
     description: [
       "Implemented game logic and character animations in Unity 2D with C# and JavaScript across multiple team projects."
     ]
@@ -337,13 +344,18 @@ function drawFirstPageChrome(page) {
     size: 26,
     color: colors.white
   });
-  text(page, "FULL-STACK WEB DEVELOPER", 216, 763, {
+  text(page, "IT / TECHNOLOGY PROFESSIONAL", 216, 763, {
     font: "F2",
     size: 10.5,
     color: [0.42, 0.9, 0.39],
     charSpace: 0.55
   });
-  wrappedText(page, headerSummary, 216, 738, 332, {
+  text(page, "Full-Stack Development  |  Systems  |  Database  |  Deployment", 216, 749, {
+    font: "F2",
+    size: 8.4,
+    color: [0.82, 0.92, 0.91]
+  });
+  wrappedText(page, headerSummary, 216, 731, 332, {
     size: 8.7,
     lineHeight: 11.2,
     color: [0.9, 0.96, 0.95]
@@ -358,7 +370,7 @@ function drawContinuationChrome(page) {
     size: 11.5,
     color: colors.white
   });
-  text(page, "Full-Stack Web Developer | React, Spring Boot, ASP.NET MVC, WordPress", 228, 817, {
+  text(page, "IT / Technology Professional | Full-Stack Development, Systems & Deployment", 228, 817, {
     size: 8.2,
     color: [0.82, 0.92, 0.91]
   });
@@ -495,7 +507,8 @@ function addBullet(flow, pages, value) {
 }
 
 function addExperience(flow, pages, item) {
-  flow = ensureSpace(flow, pages, 58);
+  // Keep the heading, role, link and first bullet together on one page
+  flow = ensureSpace(flow, pages, 95);
   const titleWidth = flow.width - 112;
   const titleLines = wrapText(item.company, titleWidth, 9.8);
   titleLines.forEach((lineValue, index) => {
@@ -544,7 +557,7 @@ function buildPages() {
     flow = addExperience(flow, pages, item);
   });
 
-  flow = addSection(flow, pages, "Technical Projects");
+  flow = addSection(flow, pages, "Personal & Training Projects");
   projects.forEach((item) => {
     flow = addExperience(flow, pages, item);
   });

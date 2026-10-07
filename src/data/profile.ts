@@ -36,29 +36,30 @@ const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const profile = {
   name: "Le Thanh Phuong",
   preferredName: "Daniel",
-  role: "Full-Stack Web Developer | WordPress Developer | Frontend Game Developer | IT Support",
-  headline: "Full-Stack Web Developer & Frontend System Builder",
+  role: "IT / Technology Professional | Full-Stack Web Developer",
+  headline: "IT / Technology Professional",
+  subheadline: "Full-Stack Development | Systems | Database | Deployment",
   location: "Da Nang, Vietnam",
   email: "phuonglt20102001@gmail.com",
   phone: "+84 911 389 543",
   github: "https://github.com/GnouhPTV",
-  linkedin: "#",
   summary:
-    "I build practical ASP.NET MVC / SQL Server systems, WordPress websites, frontend interfaces, HTML5 playable ad prototypes, no-code builder MVPs, Discord bot/stat tracker projects, AI chatbot workflows, SEO-ready product pages, and automation tools for real business operations. My work connects development, hosting, database, SEO, game interaction logic, and daily website maintenance into usable systems that support sales, learning, and internal teams.",
+    "IT graduate with hands-on experience building and running business systems and production websites: a sales portal (Spring Boot, React, SQL Server), an internal admin system (ASP.NET MVC, C#, IIS), and 13 company websites (WordPress, PHP, JavaScript). I work across frontend, backend, databases, and deployment, fix issues in live systems, and pick up new tools quickly.",
   roles: [
-    "WordPress Developer",
     "Full-Stack Web Developer",
-    "Frontend Game Developer",
-    "Playable Ads Learner",
-    "IT Support Engineer",
-    "SQL Server System Developer",
-    "Ecommerce Platform Support"
+    "Software / Systems Developer",
+    "IT / Technology",
+    "Database / SQL Server",
+    "IT / Technical Support",
+    "Implementation / Deployment",
+    "Frontend Developer",
+    "WordPress Developer"
   ],
   actions: [
     { label: "View Projects", href: "#projects", kind: "primary" },
     {
       label: "Download CV",
-      href: `${publicBasePath}/LE-THANH-PHUONG-CV-UPDATED.pdf`,
+      href: `${publicBasePath}/LE-THANH-PHUONG-CV-IT.pdf`,
       kind: "secondary",
       download: true
     },
@@ -66,57 +67,50 @@ export const profile = {
     { label: "GitHub", href: "https://github.com/GnouhPTV", kind: "ghost" }
   ] satisfies ProfileAction[],
   about: [
-    "I am a full-stack web developer with hands-on experience building ASP.NET MVC systems, SQL Server-backed business websites, WordPress websites, e-commerce pages, internal management tools, AI chatbot workflows, HTML5 playable ad prototypes, no-code playable ads builder workflows, and server environments. I do not only create interfaces; I connect pages, content, hosting, database logic, SEO requirements, interaction logic, and business operations so each website or project can support real users.",
-    "My experience includes WordPress, Flatsome, Elementor, WooCommerce, PHP, JavaScript, TypeScript, React, Next.js, Zustand, Tailwind CSS, Vite, Phaser 3, JSZip, .NET MVC, C#, SQL Server, MySQL, IIS Manager, VPS servers, Hostinger, DNS configuration, Cloudflare CDN, SEO page planning, product content optimization, and internal system development.",
-    "I am currently improving my English and preparing for international IT opportunities where practical system thinking, reliable execution, frontend/game interaction skills, and business-focused web development are valuable. My current English profile is Duolingo English Test 95, presented as IELTS 5.5 equivalent for CV purposes."
+    "I am an IT graduate with hands-on experience across frontend, backend, databases, deployment, hosting, and production website operations.",
+    "At ECO3D, I built and maintained Salesoft Online, a business portal for internal staff and resellers using Java Spring Boot, React, and SQL Server. It includes REST APIs, role-based access, a two-stage approval workflow, and sales dashboards. I also developed an internal admin system using ASP.NET MVC, C#, and SQL Server, and have worked on 13 production company websites.",
+    "On the operations side, I have deployed applications to VPS servers with IIS, managed DNS, Cloudflare, and SSL, handled SQL Server backups and restores, and diagnosed and fixed problems in live systems.",
+    "Full-stack web development is my main strength, while my experience also covers systems, databases, deployment, and technical support. I am comfortable learning new tools and adapting to different business domains, and I am open to suitable IT, systems, implementation, technical support, database, or development opportunities."
   ],
   focusAreas: [
-    "ASP.NET MVC, C#, SQL Server, and internal business systems",
-    "WordPress websites, product pages, and SEO landing pages",
-    "No-code builder MVPs, editor UI, runtime preview, and ZIP export workflows",
-    "HTML5 game prototypes, Phaser 3 scenes, and playable ads mechanics",
-    "Hosting, DNS, Cloudflare, IIS, and VPS support",
-    "AI chatbot, automation, and website support workflows"
+    "Business systems with Spring Boot, React, ASP.NET MVC, and SQL Server",
+    "Servers and deployment: IIS, VPS, DNS, SSL, and Cloudflare",
+    "Databases: SQL Server and MySQL, including backup and restore",
+    "13 production company websites built on WordPress, PHP, and JavaScript",
+    "Troubleshooting live systems and learning new tools independently"
   ],
   strengths: [
-    "Practical full-stack development experience",
-    "Strong WordPress website building and business website operations experience",
-    "Able to design frontend product MVP workflows with dashboard, editor, preview, validation, and export",
-    "Able to build HTML5 interactive prototypes with TypeScript, Vite, and Phaser 3",
-    "Able to connect technical work with SEO pages, product content, and marketing goals",
-    "Experience with hosting, DNS, Cloudflare, IIS, VPS, and SQL Server",
-    "Fast learner and willing to research new technologies",
-    "Able to work independently and manage multiple website tasks",
-    "Experience building and supporting real business websites, internal systems, chatbot workflows, and frontend game learning projects"
+    "Full-stack development: React, Next.js, Spring Boot, ASP.NET MVC, C#, and PHP",
+    "Databases and APIs: SQL Server, MySQL, MongoDB, REST APIs, and stored procedures",
+    "Business systems: user login, role-based access, approval workflows, and dashboards",
+    "Servers and deployment: IIS, VPS, Hostinger, DNS, SSL, Cloudflare, and database backup / restore",
+    "Troubleshooting live systems and learning new tools independently",
+    "Documenting for non-technical readers and coordinating tasks and interns"
   ],
   differentiators: [
     {
-      title: "Real Business Website Experience",
-      text: "I have worked on websites used by real businesses, not only classroom or demo projects. I understand how websites support sales, product content, SEO, customer support, and daily operations."
+      title: "Real Production Experience",
+      text: "I have built and maintained systems that real people use every day: a sales portal for staff and resellers, an internal admin system, and 13 live company websites, not only classroom or demo projects."
     },
     {
-      title: "Full-Stack + System Support Mindset",
-      text: "I can work across frontend, backend, database, deployment, IIS, VPS, DNS, SSL, Cloudflare, and troubleshooting. This helps me solve problems from both the code side and the operation side."
+      title: "Full-Stack + Operations",
+      text: "I can work across frontend, backend, database, deployment, and troubleshooting, so I can follow a problem from the screen a user sees down to the server it runs on."
     },
     {
-      title: "ASP.NET MVC and SQL Server Practice",
-      text: "I have hands-on experience building and maintaining ECO3D systems with ASP.NET MVC, C#, SQL Server, JavaScript, HTML, CSS, IIS, and database-backed workflows."
+      title: "Systems & Database",
+      text: "Hands-on work with Spring Boot, React, ASP.NET MVC, C#, and SQL Server, including user login, role-based access, approval workflows, and reporting."
     },
     {
-      title: "WordPress and SEO Execution",
-      text: "I can build WordPress websites, landing pages, product pages, and SEO content structures using Flatsome, Elementor, WooCommerce, PHP, CSS, and practical content planning."
+      title: "Deployment & Technical Support",
+      text: "I have deployed applications on IIS and VPS servers and managed hosting, DNS, SSL, and Cloudflare to keep business websites online and working."
     },
     {
       title: "Business-Focused Technical Work",
-      text: "I do not only build features. I think about whether a page is useful for customers, clear for sales teams, optimized for search, maintainable for the company, and stable in production."
+      text: "I turn business requests into technical tasks, write documentation, and explain technical work in a way that non-technical colleagues can follow."
     },
     {
-      title: "Frontend Game and Interaction Learning",
-      text: "I have built HTML5 playable ad prototypes with Phaser 3 and TypeScript to understand scenes, input, collision, timers, rewards, end cards, CTA flow, replay logic, and export packaging."
-    },
-    {
-      title: "AI and Automation Direction",
-      text: "I have explored chatbot workflows, product consultation flows, automation logic, and internal tool concepts, which helps me bring modern support workflows into web systems."
+      title: "Continuous Self-Learning",
+      text: "I taught myself Next.js, TypeScript, Phaser 3, and other tools by building my own projects, and I am comfortable picking up new technologies when the work needs them."
     }
   ] satisfies DifferentiatorItem[],
   contact: [
@@ -134,11 +128,6 @@ export const profile = {
       label: "GitHub",
       value: "github.com/GnouhPTV",
       href: "https://github.com/GnouhPTV"
-    },
-    {
-      label: "LinkedIn",
-      value: "LinkedIn profile placeholder",
-      href: "#"
     },
     {
       label: "Location",
@@ -169,20 +158,4 @@ export const certificates: CertificateItem[] = [
     note: "Current English certificate used for CV/profile presentation.",
     href: `${publicBasePath}/Duolingo-English-Test.pdf`
   }
-];
-
-export const seoTopics = [
-  "Labor protection equipment market",
-  "SEO page structure for WordPress websites",
-  "Product landing page planning",
-  "Protective eyewear",
-  "Safety glasses for dust, chemicals, and UV protection",
-  "Gas masks and toxic gas protection",
-  "KING PRO HighFlow Mask",
-  "Chemical poisoning first aid article",
-  "Gloves keyword research for ECO3D",
-  "Respiratory protection keyword research",
-  "Product content writing",
-  "Backlink planning",
-  "Homepage redesign and UX audit"
 ];

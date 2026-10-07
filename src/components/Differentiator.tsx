@@ -3,11 +3,10 @@
 import { profile } from "@/data/profile";
 import { motion } from "framer-motion";
 import {
-  Bot,
   BriefcaseBusiness,
   Database,
-  Gamepad2,
-  Globe,
+  GraduationCap,
+  Layers,
   ServerCog,
   Target
 } from "lucide-react";
@@ -15,12 +14,11 @@ import MotionWrapper from "./MotionWrapper";
 
 const icons = [
   BriefcaseBusiness,
-  ServerCog,
+  Layers,
   Database,
-  Globe,
+  ServerCog,
   Target,
-  Gamepad2,
-  Bot
+  GraduationCap
 ];
 
 export default function Differentiator() {
@@ -29,12 +27,12 @@ export default function Differentiator() {
       <div className="mb-10 max-w-3xl">
         <p className="section-kicker">What Makes Me Different</p>
         <h2 className="section-title">
-          I bring real work experience from business websites, systems, SEO, support, and interactive frontend learning.
+          Real systems experience, a broad IT foundation, and the habit of learning what the work needs.
         </h2>
         <p className="mt-5 text-base leading-8 text-slate-300">
-          My advantage is practical execution. I have worked with real website
-          operations, database-backed systems, hosting issues, SEO pages, product
-          content, frontend interaction logic, and business support workflows.
+          I have built, deployed, and supported systems that a business runs on
+          every day, from the user interface and database to the server and the
+          problems that come up in production.
         </p>
       </div>
 

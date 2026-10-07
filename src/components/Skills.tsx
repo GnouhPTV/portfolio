@@ -5,25 +5,14 @@ import { motion } from "framer-motion";
 import {
   Code2,
   Database,
-  Gamepad2,
   Globe,
   ServerCog,
   ShieldCheck,
-  Target,
-  Wrench
+  Target
 } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 
-const icons = [
-  Code2,
-  Gamepad2,
-  Wrench,
-  Database,
-  Globe,
-  ServerCog,
-  Target,
-  ShieldCheck
-];
+const icons = [Code2, Database, ShieldCheck, ServerCog, Globe, Target];
 
 export default function Skills() {
   return (
@@ -31,7 +20,7 @@ export default function Skills() {
       <div className="mb-10 max-w-3xl">
         <p className="section-kicker">Technical Skills</p>
         <h2 className="section-title">
-          A full-stack toolkit for business websites, internal systems, and interactive frontend projects.
+          Frontend, backend, databases, and servers, with full-stack development as the core.
         </h2>
       </div>
 

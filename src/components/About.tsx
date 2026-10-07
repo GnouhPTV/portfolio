@@ -1,8 +1,8 @@
 import { profile } from "@/data/profile";
-import { CheckCircle2, Gamepad2, Layers, Server, TrendingUp } from "lucide-react";
+import { CheckCircle2, Database, Globe, Layers, Server, Wrench } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 
-const focusIcons = [Layers, Server, Gamepad2, TrendingUp, CheckCircle2];
+const focusIcons = [Layers, Server, Database, Globe, Wrench];
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <div>
           <p className="section-kicker">About Me</p>
           <h2 className="section-title">
-            Practical development for websites, systems, frontend interaction, and business growth.
+            An IT background, real systems in production, and practical problem solving.
           </h2>
         </div>
 

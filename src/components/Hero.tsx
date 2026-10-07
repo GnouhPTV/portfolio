@@ -344,9 +344,12 @@ export default function Hero({ onNavigate }: HeroProps) {
           <p className="mt-5 text-balance text-2xl font-semibold text-slate-100 sm:text-3xl">
             {profile.headline}
           </p>
+          <p className="mt-3 text-balance text-base font-semibold text-mint sm:text-lg">
+            {profile.subheadline}
+          </p>
 
           <div className="mt-5 flex min-h-10 flex-wrap items-center gap-3 text-lg text-slate-200">
-            <span className="text-steel">Also focused on</span>
+            <span className="text-steel">Open to</span>
             <span className="relative inline-flex min-w-[16rem] items-center rounded-lg border border-cyan/25 bg-cyan/10 px-3 py-2 text-cyan">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -410,25 +413,25 @@ export default function Hero({ onNavigate }: HeroProps) {
               <div className="space-y-3 font-mono text-sm leading-7 text-slate-300">
                 <p>
                   <span className="text-cyan">const</span>{" "}
-                  <span className="text-white">developer</span> ={" "}
+                  <span className="text-white">profile</span> ={" "}
                   <span className="text-mint">&quot;Daniel&quot;</span>;
                 </p>
                 <p>
                   <span className="text-cyan">build</span>
                   <span className="text-slate-500">(</span>
-                  <span className="text-mint">WordPress</span>,{" "}
-                  <span className="text-mint">SQLServer</span>,{" "}
-                  <span className="text-mint">NextJS</span>,{" "}
-                  <span className="text-mint">Phaser3</span>
+                  <span className="text-mint">SpringBoot</span>,{" "}
+                  <span className="text-mint">React</span>,{" "}
+                  <span className="text-mint">ASPNET</span>,{" "}
+                  <span className="text-mint">SQLServer</span>
                   <span className="text-slate-500">)</span>;
                 </p>
                 <p className="text-steel">
-                  ship.projects(&quot;web systems + HTML5 playable ads&quot;);
+                  deploy(&quot;IIS + VPS + Cloudflare&quot;).fix(&quot;production issues&quot;);
                 </p>
               </div>
               <div className="mt-7 grid grid-cols-2 gap-3">
                 {[
-                  { icon: Code2, label: "Frontend", value: "React / Phaser 3" },
+                  { icon: Code2, label: "Development", value: "React / Spring Boot" },
                   { icon: ServerCog, label: "Systems", value: "SQL / IIS / VPS" }
                 ].map((item) => {
                   const Icon = item.icon;

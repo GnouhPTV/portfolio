@@ -87,7 +87,7 @@ export default function Education() {
         <div className="mb-10 max-w-3xl">
           <p className="section-kicker">Strengths</p>
           <h2 className="section-title">
-            Professional habits built from supporting real websites and systems.
+            Practical strengths from building and running real websites and systems.
           </h2>
         </div>
 

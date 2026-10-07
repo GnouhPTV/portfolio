@@ -1,55 +1,61 @@
 # Le Thanh Phuong (Daniel) - Portfolio
 
-Full-stack web developer focused on practical business systems, WordPress websites, SEO-ready product pages, frontend interfaces, HTML5 playable ad prototypes, no-code builder MVPs, Discord bot/stat tracker projects, AI chatbot workflows, hosting, DNS, Cloudflare, IIS, SQL Server, and VPS operations.
+IT / Technology Professional with hands-on full-stack development experience: business systems, production websites, databases, servers, and deployment.
 
 **Live portfolio:** https://gnouhptv.github.io/portfolio/  
 **GitHub:** https://github.com/GnouhPTV  
-**CV:** [LE-THANH-PHUONG-CV-UPDATED.pdf](public/LE-THANH-PHUONG-CV-UPDATED.pdf)
+**IT Profile CV:** [LE-THANH-PHUONG-CV-IT.pdf](public/LE-THANH-PHUONG-CV-IT.pdf)  
+**Full-Stack CV:** [LE-THANH-PHUONG-CV-UPDATED.pdf](public/LE-THANH-PHUONG-CV-UPDATED.pdf)  
+**Business Analyst CV:** [LE-THANH-PHUONG-CV-BA.pdf](public/LE-THANH-PHUONG-CV-BA.pdf)
 
 ## Profile
 
-I build practical web systems that connect frontend interfaces, backend logic, databases, deployment, hosting, website operations, SEO requirements, and business content. My work is shaped by real website maintenance, internal system development, WordPress execution, and hands-on frontend product/game prototype learning.
+I am an IT graduate with hands-on experience across frontend, backend, databases, deployment, hosting, and production website operations. I have built and maintained a sales portal (Java Spring Boot, React, SQL Server), an internal admin system (ASP.NET MVC, C#, SQL Server), and 13 production company websites.
 
-I am especially interested in roles where I can combine full-stack development, system support, frontend product thinking, and business-focused website delivery.
+Full-stack web development is my main strength. I am also open to IT, systems, implementation, technical support, and database work where this background is useful.
 
 ## Core Strengths
 
-- Full-stack web development with ASP.NET MVC, C#, SQL Server, JavaScript, HTML, and CSS.
-- WordPress website building with Flatsome, Elementor, WooCommerce, PHP, SEO pages, landing pages, and product content.
-- Frontend development with React, Next.js, TypeScript, Tailwind CSS, Framer Motion, Vite, and Phaser 3.
-- HTML5 playable ad prototypes with scene logic, input handling, collision, timers, rewards, CTA flow, replay, and ZIP export.
-- No-code builder MVP workflows including dashboard, editor UI, asset management, preview, validation, and export.
-- Hosting and operations support across VPS, IIS Manager, DNS, SSL, Cloudflare, Hostinger, backups, and troubleshooting.
-- Automation and support workflows including Discord bots, stat trackers, REST API data fetching, and AI chatbot concepts.
+- Business systems with Java Spring Boot, React, ASP.NET MVC, C#, and SQL Server, including authentication, role-based access, approval workflows, and dashboards.
+- Deployment and operations across IIS, VPS, Hostinger, DNS, SSL, Cloudflare, and database backup and restore.
+- Troubleshooting and fixing issues in live production systems.
+- WordPress development with custom plugins, custom shortcodes, AJAX, WooCommerce, PHP, JavaScript, and MySQL.
+- Frontend development with React, Next.js, TypeScript, Tailwind CSS, Vite, and Phaser 3.
+- Self-learning through self-built projects such as a no-code playable ads builder and HTML5 game prototypes.
 
 ## Featured Work
 
-### Playable Ads Studio UI
+### Salesoft Online (ECO3D Portal)
 
-A local no-code MVP for creating UA playable ad prototypes. It includes a dashboard, template gallery, visual editor, asset manager, runtime preview, validation checklist, video-to-playable workflow, AI builder mock, and standalone ZIP export.
+A business portal for internal staff and resellers built with Java Spring Boot, React (Vite), and SQL Server. Work includes role-based access, a two-stage approval workflow, a Spring Security authentication fix, safe ID handling in a database shared with an older desktop sales system, reCAPTCHA, stored procedure integration, and sales dashboards.
 
-### UA Playable Games Lab
+### ECO3D Internal Admin System
 
-A collection of HTML5 playable ad prototypes built with Vite, TypeScript, Phaser 3, HTML, CSS, JavaScript, and JSZip. The project explores tap, drag, merge, collision, projectile, reward, timer, CTA, end-card, replay, and export mechanics.
+An ASP.NET MVC, C#, and SQL Server admin system with authentication, access control, and product data management, deployed on VPS servers with IIS, DNS, SSL, Cloudflare, and database backups.
 
-### ECO3D Business Websites and Internal Systems
+### ECO3D Production Websites
 
-Hands-on full-stack and operations work using ASP.NET MVC, C#, SQL Server, JavaScript, HTML, CSS, IIS, VPS deployment, domain/DNS configuration, SSL, Cloudflare, backups, and database access.
+Custom development and maintenance for 13 company websites with WordPress, PHP, JavaScript, MySQL, custom plugins and shortcodes, AJAX search and filtering, REST API integration, hosting, and production troubleshooting.
 
-### WordPress, SEO, and Product Websites
+### Playable Ads Studio UI (self-built project)
 
-WordPress and SEO work across product pages, landing pages, WooCommerce pages, Flatsome layouts, Elementor sections, safety equipment content, SEO keyword planning, and hosting support.
+A local no-code MVP for creating playable ad prototypes, with a dashboard, template gallery, visual editor, asset manager, runtime preview, validation, and standalone ZIP export.
 
-### Valorant Stats Discord Bot
+### UA Playable Games Lab (self-learning project)
 
-A Discord bot for Valorant player stat lookup using Node.js, Discord.js, MongoDB, Mongoose, Axios, node-fetch, and REST API data retrieval. It supports competitive/unrated stats, recent match summaries, agent/weapon/map stats, and linked usernames.
+HTML5 playable ad prototypes built with Vite, TypeScript, Phaser 3, and JSZip, covering tap, drag, merge, collision, timers, rewards, end cards, replay, and export.
+
+### Valorant Stats Discord Bot (personal project)
+
+A Discord bot for Valorant player stats using Node.js, Discord.js, MongoDB, Mongoose, Axios, and REST API data retrieval.
 
 ## Technical Stack
 
-**Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Framer Motion, Vite, Phaser 3  
-**Backend/System:** ASP.NET MVC, C#, SQL Server, PHP, MySQL, IIS, VPS, DNS, SSL, Cloudflare  
-**WordPress/SEO:** WordPress, Flatsome, Elementor, WooCommerce, SEO content planning, product pages, landing pages  
-**Tools/Automation:** Node.js, Discord.js, MongoDB, Mongoose, Axios, REST API, Git, GitHub, JSZip  
+**Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, AJAX, Vite, Phaser 3  
+**Backend & Database:** Java, Spring Boot, Spring Security, ASP.NET MVC, C#, PHP, Node.js, SQL Server, MySQL, MongoDB, REST API  
+**Business Systems:** Authentication, role-based access, approval workflows, dashboards / reporting, user management  
+**Servers & Deployment:** IIS, VPS, Hostinger, Cloudflare, DNS, SSL, database backup / restore, Git, GitHub  
+**WordPress / CMS:** WordPress, WooCommerce, Flatsome, Elementor, custom plugins, custom shortcodes  
 
 ## Portfolio Sections
 
@@ -60,8 +66,6 @@ A Discord bot for Valorant player stat lookup using Node.js, Discord.js, MongoDB
 - Experience
 - Projects
 - Websites
-- AI Tools
-- SEO
 - Education
 - Contact
 
