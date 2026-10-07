@@ -67,8 +67,15 @@ export default function Navbar({
             onClick={() => handleNavigate("hero")}
             className="group flex min-w-0 items-center gap-3 text-left"
           >
-            <span className="grid h-10 w-10 place-items-center rounded-lg border border-mint/35 bg-mint/10 text-sm font-semibold text-mint shadow-mint">
-              DP
+            <span
+              aria-hidden="true"
+              className="grid h-10 shrink-0 rounded-lg bg-gradient-to-br from-mint via-cyan to-mint/30 p-px shadow-mint transition duration-300 group-hover:shadow-[0_0_26px_rgba(52,211,153,0.45)]"
+            >
+              <span className="flex items-end justify-center gap-px rounded-[7px] bg-ink px-2.5 pb-[11px] font-mono text-base font-bold leading-none">
+                <span className="text-cyan">&gt;</span>
+                <span className="text-white">Daniel</span>
+                <span className="logo-cursor mb-px ml-px h-[3px] w-[7px] rounded-[1px] bg-mint" />
+              </span>
             </span>
             <span className="min-w-0">
               <span className="block text-sm font-semibold text-white">
