@@ -4,9 +4,7 @@ IT / Technology Professional with hands-on full-stack development experience: bu
 
 **Live portfolio:** https://gnouhptv.github.io/portfolio/  
 **GitHub:** https://github.com/GnouhPTV  
-**IT Profile CV:** [LE-THANH-PHUONG-CV-IT.pdf](public/LE-THANH-PHUONG-CV-IT.pdf)  
-**Full-Stack CV:** [LE-THANH-PHUONG-CV-UPDATED.pdf](public/LE-THANH-PHUONG-CV-UPDATED.pdf)  
-**Business Analyst CV:** [LE-THANH-PHUONG-CV-BA.pdf](public/LE-THANH-PHUONG-CV-BA.pdf)
+**CV:** [LE-THANH-PHUONG-CV-IT.pdf](public/LE-THANH-PHUONG-CV-IT.pdf)
 
 ## Profile
 

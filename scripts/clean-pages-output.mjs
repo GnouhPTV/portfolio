@@ -5,6 +5,8 @@ const outputRoot = resolve(process.cwd(), "out");
 
 const localOnlyOutputFiles = [
   "LE-THANH-PHUONG-CV-UPDATED.html",
+  "LE-THANH-PHUONG-CV-UPDATED.pdf",
+  "LE-THANH-PHUONG-CV-BA.pdf",
   "images/cv-profile-header.jpg"
 ];
 
